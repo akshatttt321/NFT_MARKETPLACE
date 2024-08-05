@@ -9,6 +9,7 @@ html,body{
     scroll-behavior: smooth;
 }
 
+h1::text-
 
 input::placeholder {
   color: #888;
