@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,body{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    scroll-behavior: smooth;
+}
+
 
 input::placeholder {
   color: #888;
@@ -31,4 +37,22 @@ transform: translate3d(30px,-42px,54px);
 50%{
 transform: translate3d(0,0,0);
 }
+}
+
+.blg{
+  background: rgb(20,17,51);
+  background: linear-gradient(166deg, rgba(20,17,51,1) 11%, rgba(37,26,37,1) 68%, rgba(126,4,130,1) 96%);
+
+}
+
+.cards {
+  transition: all transform 0.3 ease-in-out;
+}
+
+.cards:hover {
+  transform: scale(1.2);
+}
+
+.highlight{
+  opacity: 0.5;
 }
