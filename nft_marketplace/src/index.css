@@ -44,6 +44,55 @@ transform: translate3d(0,0,0);
 }
 }
 
+@keyframes slideIN{
+  0%{
+ transform: translateY(25px);
+ }
+ 100%{
+ transform: translateY(0);
+ }
+ }
+
+ @keyframes slideOut{
+  0%{
+ transform: translateY(0px);
+ }
+ 100%{
+ transform: translateY(-25px);
+ }
+ }
+
+ @keyframes cardSlideIn{
+  0%{
+ transform: translateX(250%);
+ }
+ 100%{
+ transform: translateX(0px);
+ }
+ }
+
+ @keyframes cardSlideOut{
+  0%{
+ transform: translateX(0px);
+ }
+ 100%{
+ transform: translateX(-250%);
+ }
+ }
+.cardSlideIn{
+  animation: cardSlideIn .5s ease-in-out;
+}
+
+.cardSlideOut{
+  animation: cardSlideOut .5s ease forwards;
+}
+.slideOut{
+  animation: slideOut .5s ease-in-out; 
+ }
+.slideIn{
+  animation: slideIN .5s ease-in-out;
+}
+
 .blg{
   background: rgb(20,17,51);
   background: linear-gradient(166deg, rgba(20,17,51,1) 11%, rgba(37,26,37,1) 68%, rgba(126,4,130,1) 96%);
@@ -71,11 +120,35 @@ transform: translate3d(0,0,0);
   0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-/* @keyframes rotate {
-  0% {
-    transform: rotate3d(1,1,1,0deg);
+ @keyframes slide {
+  0%,100% {
+    transform:translateX(0);  }
+  50% {
+    transform:translateX(1350%);
   }
-  100% {
-    transform: rotate3d(1,1,1,360deg);
+} 
+
+@keyframes slide1 {
+  0%,100% {
+    transform:translateX(0);  }
+  50% {
+    transform:translateX(-1350%);
   }
-} */
+} 
+.button{
+  color:#9ca3af
+}
+
+.button:hover{
+  color:white
+}
+
+.arrow::after{
+  content: '▼';
+  color: #9ca3af;
+  position: absolute;
+  margin-top: 27px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 12px;
+}

@@ -227,17 +227,16 @@ function handleVisibility(){
       animation2.scrollTrigger.kill();
       animation3.scrollTrigger.kill();
     }
-},[]);
+});
 
   const trending = ["pudgyPenguin", "sandbox", "cryptopunks", "Azuki", "DeGods"]
-  const mint= ["pudgyPenguin", "sandbox", "cryptopunks", "Azuki", "DeGods"]
-  const collections= ["pudgyPenguin", "sandbox", "cryptopunks", "Azuki", "DeGods"]
+  const mint= ["dummy1", "dummy2", "dummy3", "dummy4", "dummy5"]
+  const collections= ["dummy6", "dummy7", "dummy8", "dummy9", "dummy10"]
 
 
     return (
-      <>
-      <div className=' bg-[url(cosmos-1853491_1280.jpg)] bg-cover bg-repeat'
-      >
+      <div>
+      <div className=' bg-[url(cosmos-1853491_1280.jpg)] bg-cover bg-repeat'>
     <div className=' overflow-x-hidden home float h-[50vw] w-screen'>
       <div className='absolute'>
       <img src="/DeGods.png" alt="pudgy-penguins" className='absolute z-0 mt-20 bounce w-24 h-24 hover:cursor-pointer rounded-full ml-96' style={{ 
@@ -323,11 +322,11 @@ function handleVisibility(){
       <div className='overflow-x-hidden h-1/2 w-[200vw] flex '>
       {collections.map((name,index)=>(
         <div 
-        key={index}
+        key={name}
         className='pin mx-4 border-[1px] border-t-0 border-solid border-gray-300 hover:shadow-gray-400 hover:shadow-lg x-4 rounded-lg bg-white  bg-opacity-30 backdrop:blur-lg backdrop-filter h-full w-[40vw]'>
            <div className='absolute h-[70%] w-full transition-transform duration-300 hover:-translate-y-6 hover:z-10 '>
   <img src={`${name}.png`} alt="Description" 
-       className=' border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
+       className=' aspect-video border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
 </div>
           </div>
       ))}
@@ -338,12 +337,12 @@ function handleVisibility(){
       <div className='overflow-x-hidden h-[50vh] w-[200vw] flex '>
      {mint.map((name,index)=>(
       <div
-      key={index}
+      key={name}
       className='pin2 mx-4 border-[1px] border-t-0 border-solid border-gray-300 hover:shadow-gray-400 hover:shadow-lg rounded-lg bg-white bg-opacity-30 backdrop:blur-lg backdrop-filter h-full w-[40vw]' 
       >
          <div className='absolute h-[70%] w-full transition-transform duration-300 hover:-translate-y-6 hover:z-10 '>
   <img src={`${name}.png`} alt="Description" 
-       className=' border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
+       className=' aspect-video border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
 </div>
         </div>
      ))}
@@ -354,18 +353,18 @@ function handleVisibility(){
       <div className='overflow-x-hidden h-[50vh] w-[200vw] flex '>
       {trending.map((name, index) => (
   <div 
-    key={index}
+    key={name}
     className='relative pin3 overflow-visible border-[1px] border-t-0 border-solid border-gray-300 hover:shadow-gray-400 hover:shadow-lg mx-4 rounded-lg bg-white bg-opacity-30 backdrop:blur-lg backdrop-filter h-full w-[40vw]'
   >
     <div className='absolute h-[70%] w-full transition-transform duration-300 hover:-translate-y-6 hover:z-10 '>
   <img src={`${name}.png`} alt="Description" 
-       className=' border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
+       className=' aspect-video border-gray-200 border-b-2 rounded-lg w-full h-full object-cover ' />
 </div>
   </div>
 ))}
       </div>
       </div>
-    </>
+      </div>
   )
 }
 export default Home
