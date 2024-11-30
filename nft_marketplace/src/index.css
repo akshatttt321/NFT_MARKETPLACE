@@ -79,6 +79,12 @@ transform: translate3d(0,0,0);
  transform: translateX(-250%);
  }
  }
+@keyframes animate{
+  0%{
+    transfrom: 
+  }
+}
+
 .cardSlideIn{
   animation: cardSlideIn .5s ease-in-out;
 }

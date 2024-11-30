@@ -215,7 +215,7 @@ function Trending() {
                     </div>
                     <div key={name.collection} className='flex justify-start items-center'>
                     <div className='flex items-center text-center gap-[60px]'>
-                    <h1 className='text-[18px] text-white font-playfair'>{stats?stats[index]?.total?.floor_price>0.01? 
+                    <h1 className={`text-[18px] text-white font-playfair  ${stats?([index]?.total?.floor_price>0.001?'':'text-center'):''}`}>{stats?stats[index]?.total?.floor_price>0.01? 
                     stats[index]?.total?.floor_price.toPrecision(4)+' '+(stats[index]?.total?.floor_price_symbol?stats[index]?.total?.floor_price_symbol:"ETH"):
                     "-":"Fetching..."}</h1>
                     <h1 className='text-[18px] text-white font-playfair'>{stats?stats[index]?.intervals?.[0]?.volume.toPrecision(4)+' '+(stats[index]?.total?.floor_price_symbol? stats[index]?.total?.floor_price_symbol:"ETH"):"Fetching..."}</h1>
@@ -235,7 +235,7 @@ function Trending() {
                     </div>
                     <div key={name.collection} className='flex justify-center items-center'>
                     <div className='flex items-center gap-[60px]'>
-                    <h1 className='text-[18px] text-white font-playfair'>{stats?stats[index+5]?.total?.floor_price>0.01? 
+                    <h1 className={`text-[18px] text-white font-playfair ${stats?[index+5]?.total?.floor_price>0.001?'':'text-center':''}`}>{stats?stats[index+5]?.total?.floor_price>0.001? 
                     stats[index+5]?.total?.floor_price.toPrecision(4)+' '+stats[index+5]?.total?.floor_price_symbol:
                     "-":"Fetching..."}</h1>                   
                     

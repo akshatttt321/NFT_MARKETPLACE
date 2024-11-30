@@ -1,5 +1,4 @@
 import React from 'react'
-import Cards from './Cards';
 import { useState,useRef,useEffect } from 'react';
 import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -166,7 +165,7 @@ function handleVisibility(){
           trigger:container,
           start:'top center',
           end:'center 70%',
-          scrub:2,
+          scrub:3,
         },
         marginLeft:0,
       })
@@ -178,7 +177,7 @@ function handleVisibility(){
         trigger:container,
         start:'top center',
         end:'bottom 70%',
-        scrub:2
+        scrub:3
       },
       opacity:1,
     }
