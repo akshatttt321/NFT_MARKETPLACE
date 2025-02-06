@@ -5,7 +5,9 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className=" flex flex-col justify-center items-center w-svw h-svh bg-[url(footerBg.jpeg)] bg-cover bg-center">
+    <div className=" flex flex-col justify-center items-center w-svw h-svh bg-cover bg-center"
+     style={{ backgroundImage: "url('footerBg.jpeg')"}}
+     >
       <div className=' flex flex-col justify-between w-[85%] h-[85%] bg-gradient-to-br from-gray-200 via-gray-400 to-gray-700 rounded-lg shadow-lg'>
       <div className='flex justify-between'>
         <div className='flex flex-col gap-32'>
