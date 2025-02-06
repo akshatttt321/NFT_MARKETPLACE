@@ -235,7 +235,9 @@ function handleVisibility(){
 
     return (
       <div>
-      <div className=' bg-[url(cosmos-1853491_1280.jpg)] bg-cover bg-repeat'>
+      <div className='bg-cover bg-repeat'
+        style={{ backgroundImage: "url('cosmos-1853491_1280.jpg')"}}
+        >
     <div className=' overflow-x-hidden home float h-[50vw] w-screen'>
       <div className='absolute'>
       <img src="/DeGods.png" alt="pudgy-penguins" className='absolute z-0 mt-20 bounce w-24 h-24 hover:cursor-pointer rounded-full ml-96' style={{ 
